@@ -1,13 +1,11 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import clienteRoutes from './routes/ClienteRoutes.js';
+
 const app = express();
+app.use(express.json()); // importante para ler JSON
 
-const routes = require('./src/routes');
+app.use('/', ClienteRoutes); // <- Certifique-se que está usando as rotas
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
-
-app.listen(3001, () => {
-  console.log('API executando em http://localhost:3001');
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000');
 });
