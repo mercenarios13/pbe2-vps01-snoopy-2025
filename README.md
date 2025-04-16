@@ -25,5 +25,23 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT005] Cadastre, altere e exclua um pedido.
 
 ## Tecnologias
-
+- [CT001] 
 ## Passo a Passo de como executar a API
+# Clonar o repositório
+git clone SEU_REPO_URL
+
+# Entrar na pasta
+cd nome-do-projeto
+
+# Instalar dependências
+npm install
+
+# Configurar o .env
+cp .env.example .env
+# (edite com as credenciais corretas, se precisar)
+
+# Rodar migrations do banco de dados
+npx prisma migrate dev --name init
+
+# Rodar o projeto
+npm run dev
